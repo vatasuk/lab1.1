@@ -24,6 +24,7 @@ public class Main {
                 return Integer.compare(b, a);
             }
         });
+        System.out.println("\nСортированный массив");
         repos.pr(cities);
     }
 }

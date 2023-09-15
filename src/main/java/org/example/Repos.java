@@ -1,10 +1,7 @@
 package org.example;
-
 import java.awt.*;
 import java.util.List;
-
 public class Repos {
-
     public void pr(List<City> cities, List<Park> parks) {
         for (int i = 0; i < cities.size(); i++) {
             String st = status(cities.get(i).getStatus());
@@ -22,12 +19,9 @@ public class Repos {
         for (int i = 0; i < cities.size(); i++) {
             String st = status(cities.get(i).getStatus());
             System.out.printf("Название города - %s, население - %d, статус - %s \n", cities.get(i).getName(), cities.get(i).getPop(), st);
-            System.out.println("Парки в этом городе:");
+
         }
     }
-
-
-
     private  String status(int id) {
         String stat = null;
         switch (id)
@@ -42,8 +36,7 @@ public class Repos {
     private  String water(int id)
     {
         String wt = null;
-        switch (id)
-        {
+        switch (id) {
             case 1: wt = "Есть";
                 break;
             case 2: wt = "Нет";
@@ -54,8 +47,7 @@ public class Repos {
     private  String type(int id)
     {
         String t = null;
-        switch (id)
-        {
+        switch (id) {
             case 1: t = "vb";
                 break;
             case 2: t = "ghg";
@@ -63,5 +55,4 @@ public class Repos {
         }
         return t;
     }
-
 }
