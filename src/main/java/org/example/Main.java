@@ -11,7 +11,7 @@ public class Main {
 
         ArrayList<Park> parks = new ArrayList<>();
         parks.add(new Park(1, 1, 2500, 0, 1, "gfgf", "14.05.1978"));
-        parks.add(new Park(1, 1, 2500, 0, 1, "fgfhb", "21.08.1978"));
+        parks.add(new Park(1, 1, 3500, 0, 1, "fgfhb", "21.08.1978"));
         parks.add(new Park(2, 3, 500, 1, 2, "dfd", "15.10.1998"));
         parks.add(new Park(3, 2, 1500, 1, 1, "xvc", "27.03.2005"));
 

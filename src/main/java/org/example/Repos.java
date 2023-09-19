@@ -2,7 +2,9 @@ package org.example;
 import java.awt.*;
 import java.util.List;
 public class Repos {
+
     public void pr(List<City> cities, List<Park> parks) {
+        int S = 0;
         for (int i = 0; i < cities.size(); i++) {
             String st = status(cities.get(i).getStatus());
             System.out.printf("Название города - %s, население - %d, статус - %s \n", cities.get(i).getName(), cities.get(i).getPop(), st);
@@ -11,10 +13,20 @@ public class Repos {
                 if (cities.get(i).getId() == parks.get(j).getCityID()) {
                     System.out.printf("Название парка - %s, Площадь - %d, наличие водоемов - %s, тип парка - %s, дата основания - %s \n ", parks.get(j).getName(),
                             parks.get(j).getS(), water(parks.get(j).getWater()), type(parks.get(j).getType()), parks.get(j).getDate());
+                    S += countS.count(parks.get(j).getS());
                 }
             }
+            System.out.println("Общая площадь парков - " + S);
+            S=0;
         }
     }
+
+    Lambda countS = (x) -> {
+        int S = 0;
+        S +=x;
+        return S;
+    };
+
     public void pr(List<City> cities) {
         for (int i = 0; i < cities.size(); i++) {
             String st = status(cities.get(i).getStatus());
@@ -37,9 +49,9 @@ public class Repos {
     {
         String wt = null;
         switch (id) {
-            case 1: wt = "Есть";
+            case 0: wt = "Есть";
                 break;
-            case 2: wt = "Нет";
+            case 1: wt = "Нет";
                 break;
         }
         return wt;
